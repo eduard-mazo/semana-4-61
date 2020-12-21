@@ -74,7 +74,7 @@ componentes desde el landing page.
 
 ## Ruta:
 
-## Login Endpoint:
+### Login Endpoint:
 
 Se debe contar un una ruta por medio de método post para el inicio de sesión de la siguiente
 manera:
