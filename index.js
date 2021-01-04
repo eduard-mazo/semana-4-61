@@ -1,20 +1,20 @@
 const express = require('express');
 const morgan = require('morgan');
 const cors = require('cors');
-const router = require('./routes');
 const path = require('path');
-const models = require('./models');
 const bodyParser = require('body-parser');
+const router = require('./routes');
+const models = require('./models');
 
 const app = express();
 app.use(morgan('dev'));
 app.use(cors());
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api', router);
 app.set('port', process.env.PORT || 3000);
